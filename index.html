@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Furniture Minimalis - Animated</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* TAMBAHKAN: Agar scroll terasa mulus */
+        html { scroll-behavior: smooth; }
+        
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        h1, h2, .font-serif { font-family: 'Playfair Display', serif; }
+        .bg-soft-blue { background-color: #d1e5e9; }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- NAVBAR -->
+    <nav class="flex items-center justify-between px-10 py-6 border-b border-gray-100 sticky top-0 bg-white/80 backdrop-blur-md z-50">
+        <div class="text-2xl font-bold italic tracking-tighter cursor-pointer" onclick="window.scrollTo(0,0)" data-aos="fade-right">The Furnit's</div>
+        
+        <!-- MODIFIKASI: Tambahkan link ID pada href -->
+        <ul class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-gray-600">
+            <li class="hover:text-black transition-colors duration-300"><a href="#hero">Collection</a></li>
+            <li class="hover:text-black transition-colors duration-300"><a href="#style">Style</a></li>
+            <li class="hover:text-black transition-colors duration-300"><a href="#design">Design</a></li>
+            <li class="hover:text-black transition-colors duration-300"><a href="#footer">Project</a></li>
+        </ul>
+
+        <div class="flex items-center space-x-4" data-aos="fade-left">
+            <!-- TAMBAHKAN: ID searchBtn -->
+            <button id="searchBtn" class="text-sm hover:scale-110 transition-transform">🔍</button>
+            <!-- TAMBAHKAN: fungsi onclick -->
+            <button onclick="handleContact()" class="bg-slate-800 text-white px-6 py-2 text-xs uppercase tracking-widest rounded-sm hover:bg-slate-700 transition-all">Contact Us</button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION: Tambahkan id="hero" -->
+    <section id="hero" class="bg-soft-blue min-h-[80vh] flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
+        <div class="z-10 max-w-2xl" data-aos="zoom-out" data-aos-duration="1500">
+            <h1 class="text-5xl md:text-7xl text-slate-700 leading-tight mb-6">
+                Acs office dits book <br> llove lis lijch
+            </h1>
+            <p class="text-slate-600 mb-8 max-w-md mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="300">
+                "Menciptakan ruang kerja impian dengan sentuhan minimalis dan kenyamanan maksimal."
+            </p>
+            <!-- MODIFIKASI: Link ke section style -->
+            <a href="#style" class="inline-block bg-slate-800 text-white px-10 py-4 text-sm uppercase tracking-widest rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
+                Explore More
+            </a>
+        </div>
+        
+        <div class="absolute bottom-0 left-10 hidden lg:block opacity-80" data-aos="fade-up" data-aos-duration="2000">
+            <img src="asset/bg awal.jpg" alt="person" class="object-cover">
+        </div>
+        <div class="absolute top-20 right-20 w-32 h-32 bg-blue-200 rounded-full blur-3xl opacity-60 animate-pulse"></div>
+    </section>
+
+    <!-- SECTION STYLE: Tambahkan id="style" -->
+    <section id="style" class="py-32 px-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right" data-aos-duration="1000">
+            <h2 class="text-4xl text-slate-800 mb-6 leading-snug">Get out arrows well <br> shryler it pieces.</h2>
+            <p class="text-gray-500 mb-8 leading-loose">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+            </p>
+            <div class="flex items-center space-x-6">
+                <button onclick="alert('Membuka detail koleksi...')" class="bg-slate-800 text-white px-8 py-3 text-sm rounded-full hover:bg-slate-600 transition-colors">Learn More</button>
+                <a href="#" class="text-sm font-semibold border-b border-black hover:pr-2 transition-all">Discover →</a>
+            </div>
+        </div>
+        <div class="bg-gray-50 p-12 flex justify-center hover-lift relative" data-aos="fade-left" data-aos-duration="1000">
+            <img src="asset/Aesthetic Light Blue and White Home Decor.jpg" alt="Chair" class="max-w-full h-auto mix-blend-multiply">
+            <div class="absolute top-10 right-10 w-20 h-20 bg-blue-100 rounded-full blur-2xl opacity-40"></div>
+        </div>
+    </section>
+
+    <!-- SECTION DESIGN: Tambahkan id="design" -->
+    <section id="design" class="py-32 px-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div class="bg-soft-blue p-12 flex justify-center order-2 md:order-1 hover-lift relative" data-aos="fade-up" data-aos-duration="1000">
+            <!-- Referensi ke file download (1).jpg sesuai permintaan sebelumnya -->
+            <img src="asset/Light Blue Wall Home Decor.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=Vase+Image'" class="max-w-full h-auto mix-blend-multiply">
+        </div>
+        <div class="order-1 md:order-2" data-aos="fade-left" data-aos-duration="1000">
+            <span class="text-xs uppercase tracking-widest text-gray-400 mb-4 block">Design Style</span>
+            <h2 class="text-4xl text-slate-800 mb-6 leading-snug">Peluct oend now</h2>
+            <p class="text-gray-500 mb-8 leading-loose">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.
+            </p>
+            <button onclick="alert('Item baru akan segera hadir!')" class="bg-slate-800 text-white px-8 py-3 text-sm rounded-full hover:shadow-lg transition-shadow">New Items</button>
+        </div>
+    </section>
+<!-- Banner Section (Di atas Footer) -->
+<section class="bg-[#d1e5e9] py-24 px-6 text-center relative overflow-hidden">
+    <!-- Elemen Dekoratif (Opsional untuk menambah kemiripan) -->
+    <div class="absolute top-10 left-1/4 w-32 h-32 bg-white/20 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+    
+    <div class="max-w-4xl mx-auto relative z-10" data-aos="zoom-in">
+        <!-- Judul Serif -->
+        <h2 class="font-serif text-3xl md:text-5xl text-slate-700 leading-tight mb-4">
+            Promue Fromasits <br> 
+            <span class="text-2xl md:text-4xl opacity-90 italic">
+                lues lias lounor i egmutes
+            </span>
+        </h2>
+        
+        <!-- Subteks -->
+        <p class="text-slate-600 mb-10 max-w-lg mx-auto text-sm md:text-base leading-relaxed">
+            uernme terrafioirits. <br>
+            welll anauinol ce for ros
+        </p>
+        
+        <!-- Tombol CTA -->
+        <div class="flex justify-center">
+            <button 
+                onclick="alert('Mengarahkan ke koleksi lengkap...')"
+                class="bg-white text-slate-800 px-12 py-3 rounded-md shadow-sm uppercase text-[10px] tracking-[0.2em] font-bold hover:bg-slate-800 hover:text-white transition-all duration-500 transform hover:scale-105 active:scale-95"
+            >
+                Shop Collection
+            </button>
+        </div>
+        
+        <!-- Ikon Dekoratif Panah Bawah (opsional) -->
+        <div class="mt-8 opacity-40 animate-bounce">
+            <span class="text-xl">↓</span>
+        </div>
+    </div>
+
+    <!-- Background Decorative Objects (Simulasi Vas/Kursi) -->
+    <div class="absolute bottom-[-20px] left-10 opacity-30 hidden lg:block">
+        <div class="w-16 h-40 bg-slate-400 rounded-t-full"></div>
+    </div>
+    <div class="absolute bottom-[-20px] right-10 opacity-30 hidden lg:block">
+        <div class="w-24 h-24 bg-white rounded-full"></div>
+    </div>
+</section>
+    <!-- FOOTER: Tambahkan id="footer" -->
+    <footer id="footer" class="bg-white py-16 px-10 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12" data-aos="fade-up">
+            <div class="col-span-1">
+                <h3 class="font-bold text-lg mb-4">We to youmch digvloties</h3>
+            </div>
+            <div class="text-sm space-y-2">
+                <p class="font-bold mb-4 uppercase tracking-tighter">Offices</p>
+                <p onclick="alert('New York Official Offices')" class="hover:translate-x-1 transition-transform cursor-pointer">New York</p>
+                <p onclick="alert('London Official Offices')" class="hover:translate-x-1 transition-transform cursor-pointer">London</p>
+                <p onclick="alert('Tokyo Official Offices')" class="hover:translate-x-1 transition-transform cursor-pointer">Tokyo</p>
+            </div>
+            <div class="text-sm text-gray-500 leading-relaxed">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+            </div>
+            <div class="flex flex-col items-end">
+                <!-- TAMBAHKAN: fungsi onclick -->
+                <button onclick="handleSubscribe()" class="bg-slate-800 text-white px-6 py-2 text-xs rounded-md w-full md:w-auto hover:bg-black transition-colors">Subscribe Now</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // 1. Inisialisasi AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-in-out',
+        });
+
+        // 2. Fungsi Tombol Contact Us
+        function handleContact() {
+            alert("Terima kasih telah menghubungi kami! Tim kami akan segera merespons email Anda.");
+        }
+
+        // 3. Fungsi Tombol Subscribe
+        function handleSubscribe() {
+            const email = prompt("Masukkan email Anda:");
+            if (email) {
+                alert("Berhasil! Newsletter akan dikirim ke: " + email);
+            }
+        }
+
+        // 4. Fungsi Search
+        document.getElementById('searchBtn').addEventListener('click', function() {
+            const query = prompt("Apa yang ingin Anda cari?");
+            if (query) {
+                alert("Mencari hasil untuk: " + query);
+            }
+        });
+    </script>
+</body>
+</html>
